@@ -47,6 +47,10 @@ class DomaciPes(Cicavec):
 
 
 ryba = Ryba(1.5, 2)
+cicavec = Cicavec(35, 10)
+vtak = Vtak(0.5, 2)
+pes = DomaciPes(30, 6, "ŠPIC", "biela")
+
 print("Ryba:")
 ryba.zobraz_info()
 ryba.pozorovat()
@@ -54,21 +58,18 @@ ryba.dychat()
 ryba.plavat()
 
 print("Cicavec:")
-cicavec = Cicavec(35, 10)
 cicavec.zobraz_info()
 cicavec.pozorovat()
 cicavec.dychat()
 cicavec.behat()
 
 print("Vták:")
-vtak = Vtak(0.5, 2)
 vtak.zobraz_info()
 vtak.pozorovat()
 vtak.dychat()
 vtak.lietat()
 
 print("Domáci pes:")
-pes = DomaciPes(30, 6, "ŠPIC", "biela")
 pes.zobraz_info()
 pes.pozorovat()
 pes.dychat()
