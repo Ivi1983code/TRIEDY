@@ -1,10 +1,12 @@
 class Zvierata:
     celkova_vaha = 0
+    zvierata_pribrali = []
 
     def __init__(self, hmotnost, vek):
         self.hmotnost = hmotnost
         self.vek = vek
         Zvierata.celkova_vaha += self.hmotnost
+        Zvierata.zvierata_pribrali.append(self)
 
     def pozorovat(self):
         print("Pozorujem svoje okolie.")
@@ -15,8 +17,12 @@ class Zvierata:
     def zobraz_info(self):
         print(f"Hmotnosť: {self.hmotnost} kg, Vek: {self.vek} rokov")
 
-    def self_weight(self):
-        return self.hmotnost
+
+    @classmethod
+    def pribrali(cls):
+        for zviera in cls.zvierata_pribrali:
+            zviera.hmotnost += 2
+            cls.celkova_vaha += 2
 
 
 class Ryba(Zvierata):
@@ -26,7 +32,7 @@ class Ryba(Zvierata):
 
 class Cicavec(Zvierata):
     def behat(self):
-        print("Bežím po zemi.")
+        print("Bežím .")
 
     @staticmethod
     def info_o_cicavcoch():
@@ -51,8 +57,6 @@ class druha_metoda_pokus:
 class DomaciMazlicek(prva_metoda_pokus, druha_metoda_pokus):
     pass
 
-
-# Vytvorenie objektov rôznych zvierat a zobrazenie ich informácií
 ryba = Ryba(1.5, 2)
 cicavec = Cicavec(35, 10)
 vtak = Vtak(0.5, 2)
@@ -79,5 +83,16 @@ vtak.lietat()
 print("Domáci mazlíček:")
 pes.zobraz_info()
 
-# Výpis celkovej hmotnosti všetkých zvierat
-print(f"Celkova vaha vsetkych zvierat: {Zvierata.celkova_vaha} kg")
+
+print(f"Celkova vaha vsetkych zvierat pred pribratim: {Zvierata.celkova_vaha} kg")
+
+Zvierata.pribrali()
+
+print(f"Celkova vaha vsetkych zvierat po pribrati: {Zvierata.celkova_vaha} kg")
+
+
+print("Aktualizovaná hmotnosť každého zvieraťa:")
+ryba.zobraz_info()
+cicavec.zobraz_info()
+vtak.zobraz_info()
+
