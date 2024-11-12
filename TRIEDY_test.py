@@ -1,7 +1,10 @@
 class Zvierata:
+    celkova_vaha = 0
+
     def __init__(self, hmotnost, vek):
         self.hmotnost = hmotnost
         self.vek = vek
+        Zvierata.celkova_vaha += self.hmotnost
 
     def pozorovat(self):
         print("Pozorujem svoje okolie.")
@@ -11,6 +14,9 @@ class Zvierata:
 
     def zobraz_info(self):
         print(f"Hmotnosť: {self.hmotnost} kg, Vek: {self.vek} rokov")
+
+    def self_weight(self):
+        return self.hmotnost
 
 
 class Ryba(Zvierata):
@@ -32,11 +38,9 @@ class Vtak(Zvierata):
         print("Lietam vo vzduchu.")
 
 
-
 class prva_metoda_pokus:
     def zobraz_info(self):
         print("prva_metoda_pokus.")
-
 
 
 class druha_metoda_pokus:
@@ -44,12 +48,11 @@ class druha_metoda_pokus:
         print("druha_metoda_pokus.")
 
 
-
 class DomaciMazlicek(prva_metoda_pokus, druha_metoda_pokus):
     pass
 
 
-
+# Vytvorenie objektov rôznych zvierat a zobrazenie ich informácií
 ryba = Ryba(1.5, 2)
 cicavec = Cicavec(35, 10)
 vtak = Vtak(0.5, 2)
@@ -75,3 +78,6 @@ vtak.lietat()
 
 print("Domáci mazlíček:")
 pes.zobraz_info()
+
+# Výpis celkovej hmotnosti všetkých zvierat
+print(f"Celkova vaha vsetkych zvierat: {Zvierata.celkova_vaha} kg")
