@@ -24,7 +24,7 @@ class Cicavec(Zvierata):
 
     @staticmethod
     def info_o_cicavcoch():
-        print("Cicavce")
+        print("Cicavce sú teplokrvné zvieratá.")
 
 
 class Vtak(Zvierata):
@@ -32,28 +32,28 @@ class Vtak(Zvierata):
         print("Lietam vo vzduchu.")
 
 
-class DomaciPes(Cicavec):
-    def __init__(self, hmotnost, vek, plemeno, farba_srst):
-        super().__init__(hmotnost, vek)
-        self.plemeno = plemeno
-        self.farba_srst = farba_srst
 
-    def stekat(self):
-        print("Štekám.")
-
-    def priniest(self):
-        print("Prinášam predmet.")
-
+class prva_metoda_pokus:
     def zobraz_info(self):
-        super().zobraz_info()
-        print(f"Plemeno: {self.plemeno}, Farba srsti: {self.farba_srst}")
+        print("prva_metoda_pokus.")
+
+
+
+class druha_metoda_pokus:
+    def zobraz_info(self):
+        print("druha_metoda_pokus.")
+
+
+
+class DomaciMazlicek(prva_metoda_pokus, druha_metoda_pokus):
+    pass
 
 
 
 ryba = Ryba(1.5, 2)
 cicavec = Cicavec(35, 10)
 vtak = Vtak(0.5, 2)
-pes = DomaciPes(30, 6, "ŠPIC", "biela")
+pes = DomaciMazlicek()
 
 print("Ryba:")
 ryba.zobraz_info()
@@ -73,10 +73,5 @@ vtak.pozorovat()
 vtak.dychat()
 vtak.lietat()
 
-print("Domáci pes:")
+print("Domáci mazlíček:")
 pes.zobraz_info()
-pes.pozorovat()
-pes.dychat()
-pes.behat()
-pes.stekat()
-pes.priniest()
