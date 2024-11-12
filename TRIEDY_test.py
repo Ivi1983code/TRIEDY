@@ -22,6 +22,10 @@ class Cicavec(Zvierata):
     def behat(self):
         print("Bežím po zemi.")
 
+    @staticmethod
+    def info_o_cicavcoch():
+        print("Cicavce")
+
 
 class Vtak(Zvierata):
     def lietat(self):
