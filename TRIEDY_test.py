@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class Zvierata:
+class Zvierata(ABC):
     celkova_vaha = 0
     zvierata_pribrali = []
 
@@ -100,3 +100,4 @@ print("Aktualizovaná hmotnosť každého zvieraťa:")
 ryba.zobraz_info()
 cicavec.zobraz_info()
 vtak.zobraz_info()
+
