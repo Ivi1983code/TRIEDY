@@ -95,4 +95,3 @@ print("Aktualizovaná hmotnosť každého zvieraťa:")
 ryba.zobraz_info()
 cicavec.zobraz_info()
 vtak.zobraz_info()
-
