@@ -59,13 +59,13 @@ class druha_metoda_pokus:
         print("druha_metoda_pokus.")
 
 
-class DomaciMazlicek(prva_metoda_pokus, druha_metoda_pokus):
+class Domace_zvieratko(prva_metoda_pokus, druha_metoda_pokus):
     pass
 
 ryba = Ryba(1.5, 2)
 cicavec = Cicavec(35, 10)
 vtak = Vtak(0.5, 2)
-pes = DomaciMazlicek()
+pes = Domace_zvieratko()
 
 print("Ryba:")
 ryba.zobraz_info()
@@ -85,7 +85,7 @@ vtak.pozorovat()
 vtak.dychat()
 vtak.lietat()
 
-print("Domáci mazlíček:")
+print("Domace zvieratko:")
 pes.zobraz_info()
 
 
