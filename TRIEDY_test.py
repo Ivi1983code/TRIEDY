@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Zvierata:
     celkova_vaha = 0
     zvierata_pribrali = []
@@ -17,6 +19,9 @@ class Zvierata:
     def zobraz_info(self):
         print(f"Hmotnosť: {self.hmotnost} kg, Vek: {self.vek} rokov")
 
+    @abstractmethod
+    def nastavit_hmotnost(self,nova_hmotnost):
+        pass
 
     @classmethod
     def pribrali(cls):
