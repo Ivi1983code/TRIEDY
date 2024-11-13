@@ -20,12 +20,12 @@ kopia_budovy = budova.get_copy()
 kopia_budovy.pridaj_poschodie("Strešná záhrada")
 
 
-print("Pôvodná budova poschodia:", budova.poschodia)   # Očakáva sa: ["Kancelaria", "Laboratorium"]
-print("Kópia budovy poschodia:", kopia_budovy.poschodia)  # Očakáva sa: ["Kancelaria", "Laboratorium", "Strešná záhrada"]
+print("Pôvodná budova poschodia:", budova.poschodia)
+print("Kópia budovy poschodia:", kopia_budovy.poschodia)
 
 
 assert budova.poschodia == ["Kancelaria", "Laboratorium"], "Chyba: Pôvodná budova bola zmenená."
-assert kopia_budovy.poschodia == ["Kancelaria", "Laboratorium", "Strešná záhrada"], "Chyba: Kópia budovy nebola správne vytvorená."
+assert kopia_budovy.poschodia == ["Kancelaria", "Laboratorium", "Strešná záhrada"],"Chyba: Kópia budovy nebola správne vytvorená."
 
 print("Gratulujem, test prešiel: Trieda Budova správne implementuje pridávanie poschodí a metódu get_copy.")
 
