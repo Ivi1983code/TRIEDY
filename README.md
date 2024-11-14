@@ -1,4 +1,5 @@
 # TRIEDY
 
-![debug](C:\Users\Segra\Desktop\LEARN_ CODE\Print screen_debug)
+![Print screen_debug](https://github.com/user-attachments/assets/25279030-f78d-47cd-9b94-27844cec29d0)
+
 
