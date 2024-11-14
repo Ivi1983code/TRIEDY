@@ -1,5 +1,6 @@
 # TRIEDY
 
-![Print screen_debug](https://github.com/user-attachments/assets/25279030-f78d-47cd-9b94-27844cec29d0)
+![obrazok](https://github.com/user-attachments/assets/2cfd4951-10af-430c-b614-94274c18b378)
+
 
 
